@@ -253,6 +253,15 @@
                 font-size: 3vw;
                 padding: 0 5%;
             }
+            .packages {
+        justify-content: center;
+    }
+
+    .package {
+        flex: 1 1 90%; /* Adjust to take up most of the width */
+        max-width: none; /* Allow it to stretch */
+    }
+
             .package h2,
             .package .price,
             .package li {
@@ -272,25 +281,32 @@
         font-size: 18px;
     }
 }
-        
+@media (max-width: 480px) and (min-width: 360px) {
+    .packages {
+        justify-content: center;
+        padding: 10px; /* Reduce padding to fit smaller screens */
+    }
+
+    .package {
+        flex: 1 1 90%; /* Take up almost full width */
+        max-width: none; /* Allow full width stretching */
+        min-width: auto; /* Prevent a minimum size issue */
+    }
+}
+
 
         @media (max-width: 480px) {
             h1 {
                 font-size: 3vw;
             }
             .body1 {
-                font-size: 2.5vw;
-                padding: 0 5%;
+                font-size: 3vw;
+                padding: 0 5%;}
             .package h2,
             .package .price,
             .package li {
-                font-size: 2vw;
+                font-size: 3vw;
             }
-            .info-columns {
-        flex-direction: column; /* Stack columns vertically */
-        align-items: center;
-    }
-
     .info-columns div {
         flex: 1 1 100%;
         text-align: center;
@@ -305,7 +321,7 @@
         font-size: 16px;
     }
 }
-        }
+        
     
 
         @media (max-width: 360px) {
@@ -314,7 +330,7 @@
                 padding: 0 5%;
             }
             .body1 {
-                font-size: 2.2vw;
+                font-size: 2.5vw;
             }
             .package {
                 flex: 1 1 90%;
