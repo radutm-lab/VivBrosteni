@@ -130,111 +130,196 @@
         }
         
         .info-section {
-    position: relative;
-    background: none; 
-    padding: 50px;
-    text-align: center;
-    color: black;
-    font-family: "Jaro", sans-serif;
-    font-style: italic;
-    overflow: hidden;
-}
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; 
-    opacity: 0.8; 
-}
-.info-columns {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 20px;
-}
+            position: relative;
+            background: none; 
+            padding: 50px;
+            text-align: center;
+            color: black;
+            font-family: "Jaro", sans-serif;
+            font-style: italic;
+            overflow: hidden;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+            opacity: 0.8; 
+        }
+        .info-columns {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+        }
 
-.info-columns div {
-    width: 30%;
-    text-align: center; 
-}
+        .info-columns div {
+            width: 30%;
+            text-align: center; 
+        }
 
-.info-columns h2 {
-    font-size: 46px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+        .info-columns h2 {
+            font-size: 46px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-.info-columns p,
-.info-columns ul,
-.info-columns li {
-    font-size: 23px;
-    line-height: 1.6;
-    margin: 5px 0;
-}
+        .info-columns p,
+        .info-columns ul,
+        .info-columns li {
+            font-size: 23px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
 
-.info-columns ul {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-}
+        .info-columns ul {
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0; 
+        }
 
-.about-us {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: transparent; /* Transparent background */
-    color:#5ac0cd ;
-    padding: 10px 20px;
-    border: none; /* Optional: Add a border for better visibility */
-    font-family: "Jaro", sans-serif;
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    z-index: 9999; /* Ensure this is higher than any other content */
-    display: inline-block; /* Prevent the button from stretching */
-    white-space: nowrap;  /* Keep the text on one line */
-}
-.about-us:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Slight highlight on hover */
-    color: #59e6ebfb;
-}
+        .about-us {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: transparent; /* Transparent background */
+            color:#5ac0cd ;
+            padding: 10px 20px;
+            border: none; /* Optional: Add a border for better visibility */
+            font-family: "Jaro", sans-serif;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            z-index: 9999; /* Ensure this is higher than any other content */
+            display: inline-block; /* Prevent the button from stretching */
+            white-space: nowrap;  /* Keep the text on one line */
+        }
+        .about-us:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slight highlight on hover */
+            color: #59e6ebfb;
+        }
 
-.about-us-top-right {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent; /* Transparent background */
-    color: #5ac0cd;
-    padding: 10px 20px;
-    border:none ; /* Optional: Add a border for better visibility */
-    font-family: "Jaro", sans-serif;
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    z-index: 9999; /* Ensure this is higher than any other content */
-    display: inline-block; /* Prevent the button from stretching */
-    white-space: nowrap;  /* Keep the text on one line */
-}
-.about-us-top-right:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Slight highlight on hover */
-    color: #59e6ebfb;
-}
-.fade-in {
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Slightly offset */
-    transition: opacity 1s ease, transform 1s ease; /* Smooth animation */
-}
+        .about-us-top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent; /* Transparent background */
+            color: #5ac0cd;
+            padding: 10px 20px;
+            border:none ; /* Optional: Add a border for better visibility */
+            font-family: "Jaro", sans-serif;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            z-index: 9999; /* Ensure this is higher than any other content */
+            display: inline-block; /* Prevent the button from stretching */
+            white-space: nowrap;  /* Keep the text on one line */
+        }
+        .about-us-top-right:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slight highlight on hover */
+            color: #59e6ebfb;
+        }
+        .fade-in {
+            opacity: 0; /* Start invisible */
+            transform: translateY(20px); /* Slightly offset */
+            transition: opacity 1s ease, transform 1s ease; /* Smooth animation */
+        }
 
-.fade-in.show {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Return to original position */
-}
+        .fade-in.show {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Return to original position */
+        }
 
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 60px;
+                padding: 15px 5%;
+            }
+            .packages {
+                padding: 15px 5%;
+            }
+            .package h2 {
+                font-size: 40px;
+            }
+            .package .price, .package li {
+                font-size: 20px;
+            }
+            .tarife-link {
+                font-size: 24px;
+                padding: 10px 20px;
+            }
+            .footer-section p {
+                font-size: 40px;
+            }
+            .footer-icons i {
+                font-size: 24px;
+            }
+            .info-columns div {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .info-columns h2 {
+                font-size: 36px;
+            }
+            .info-columns p, .info-columns ul, .info-columns li {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 48px;
+            }
+            .body1 {
+                font-size: 40px;
+                padding: 0 10px;
+            }
+            .package h2 {
+                font-size: 32px;
+            }
+            .package .price, .package li {
+                font-size: 18px;
+            }
+            .tarife-link {
+                font-size: 20px;
+            }
+            .footer-section p {
+                font-size: 32px;
+            }
+            .footer-icons i {
+                font-size: 20px;
+            }
+            .about-us, .about-us-top-right {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            .info-columns div {
+                width: 100%;
+            }
+            .info-columns h2 {
+                font-size: 28px;
+            }
+            .info-columns p, .info-columns ul, .info-columns li {
+                font-size: 16px;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:wght@400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -245,9 +330,6 @@
         <img class="image1" src="acces 1 (1).jpg" alt="Terrain">
     </div>
     
-    
-    
-        
     <p class="body1">Bine ați venit la VivBroșteni!<br>Tabăra VivBroșteni este locul unde copiii și adolescenții descoperă bucuria naturii,<br> dezvoltă abilități noi și creează prietenii pentru o viață.<br> Situată într-un cadru de poveste, tabăra oferă activități captivante<br> și programe personalizate,<br> care îmbină educația cu distracția.</p>
     <h1 class="fade-in">Servicii</h1>
     <div class="packages fade-in">
