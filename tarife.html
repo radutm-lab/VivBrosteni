@@ -159,9 +159,10 @@
         } 
 .info-columns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .info-columns div {
@@ -187,6 +188,42 @@
     list-style-type: none; 
     padding: 0; 
     margin: 0; 
+}
+@media (max-width: 768px) {
+    .info-columns div {
+        width: 45%; /* On tablets: Two columns per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .info-columns div {
+        width: 100%; /* On smaller devices: One column per row */
+    }
+}
+
+@media (max-width: 360px) {
+    .info-columns {
+        flex-direction: column; /* Stacks all columns vertically */
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+
+    .info-columns div {
+        width: 100%; /* Each column takes full width */
+        text-align: left; /* Align text to the left for better readability */
+        padding: 10px; /* Add padding for visual balance */
+    }
+
+    .info-columns h2 {
+        font-size: 20px; /* Reduce heading size */
+        margin-bottom: 10px;
+    }
+
+    .info-columns p,
+    .info-columns ul,
+    .info-columns li {
+        font-size: 16px; /* Smaller font size for better fit */
+        line-height: 1.4;
+    }
 }
     </style>
 </head>
@@ -285,6 +322,3 @@
     
 </body>
 </html>
-
-
-
