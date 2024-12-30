@@ -549,7 +549,44 @@
         font-size: 14px;
     }
 }
-
+@media (orientation: portrait) {
+    h1 {
+        font-size: 4vw; /* Adjusting for better readability on portrait screens */
+    }
+    .body1 {
+        font-size: 2.3vw;
+        padding: 1%;
+    }
+    .packages {
+        justify-content: center;
+        padding: 10px; /* Reduce padding for smaller portrait screens */
+    }
+    .package {
+        flex: 1 1 90%; /* Allow packages to stretch more */
+        max-width: none;
+    }
+    .package h2 {
+        font-size: 3vw;
+    }
+    .package .price {
+        font-size: 2.5vw;
+    }
+    .footer-section {
+        font-size: 2vw;
+        padding: 15px 10px;
+    }
+    .info-columns div {
+        flex: 1 1 100%; /* Full-width columns on portrait screens */
+        text-align: center;
+    }
+    .info-columns h2 {
+        font-size: 24px;
+    }
+    .info-columns p,
+    .info-columns li {
+        font-size: 16px;
+    }
+}
         @media only screen and(max-width: 360px) {
             h1 {
                 font-size: 2.8vw;
