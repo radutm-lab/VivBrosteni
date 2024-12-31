@@ -16,19 +16,22 @@
         }
 
         .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: transparent;
-            color: #5ac0cd;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 25px;
-            transition: background-color 0.3s ease;
-            font-family:"Jaro";
-            background-color: rgba(0, 0, 0, 0.5); /* Same background color as text */
-        }
+    position: fixed; /* Keeps it at the top-left corner */
+    top: 0; /* Aligns with the very top of the page */
+    left: 0; /* Aligns with the very left of the page */
+    margin: 0; /* Removes any default margin */
+    padding: 10px 20px; /* Adjust padding for spacing inside the button */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #5ac0cd;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+    font-family: "Jaro";
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+
 
         .back-button:hover {
             background-color: rgba(255, 255, 255, 0.2);
@@ -191,6 +194,21 @@
     padding: 0; 
     margin: 0; 
 }
+body .content, h1, p, .appointment-section, .info-columns {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @media (max-width: 768px) {
     .info-columns div {
         width: 45%; /* On tablets: Two columns per row */
@@ -322,6 +340,3 @@
     
 </body>
 </html>
-
-
-
