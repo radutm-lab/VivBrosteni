@@ -302,34 +302,35 @@ body .content, h1, p, .appointment-section, .info-columns {
     </div>
 </div>
     <script>
-        function showModal(until, cost) {
-            // Convert the date string into a Date object
-            const [day, monthName] = until.split(" ");
-            const monthMap = {
-                "Iunie": 5,
-                "Iulie": 6,
-                "August": 7,
-                "Septembrie": 8, // Added Septembrie to the map
-            };
-            const date = new Date(2024, monthMap[monthName], parseInt(day));
-    
-            // Add 7 days to the date
-            date.setDate(date.getDate() + 7);
-    
-            // Format the new date
-            const newDay = date.getDate();
-            const newMonth = Object.keys(monthMap).find(
-                (key) => monthMap[key] === date.getMonth()
-            );
-    
-            const newUntil = `${newDay} ${newMonth}`;
-    
-            // Update the modal content
-            document.getElementById('modalUntil').textContent = `Până pe: ${newUntil}`;
-            document.getElementById('modalCost').textContent = `Cost: ${cost} RON`;
-            document.getElementById('appointmentModal').style.display = 'block';
-            document.getElementById('modalOverlay').style.display = 'block';
-        }
+function showModal(until, cost) {
+    // Convert the date string into a Date object
+    const [day, monthName] = until.split(" ");
+    const monthMap = {
+        "Iunie": 5,
+        "Iulie": 6,
+        "August": 7,
+        "Septembrie": 8, // Added Septembrie to the map
+    };
+    const date = new Date(2024, monthMap[monthName], parseInt(day));
+
+    // Add 7 days to the date
+    date.setDate(date.getDate() + 7);
+
+    // Format the new date
+    const newDay = date.getDate();
+    const newMonth = Object.keys(monthMap).find(
+        (key) => monthMap[key] === date.getMonth()
+    );
+
+    const newUntil = `${newDay} ${newMonth}`;
+
+    // Update the modal content
+    document.getElementById('modalUntil').textContent = `Până pe: ${newUntil} / 6 nopți, regim complet de mese`;
+    document.getElementById('modalCost').textContent = `Cost: ${cost} RON`;
+    document.getElementById('appointmentModal').style.display = 'block';
+    document.getElementById('modalOverlay').style.display = 'block';
+}
+
     
         function closeModal() {
             document.getElementById('appointmentModal').style.display = 'none';
@@ -340,6 +341,3 @@ body .content, h1, p, .appointment-section, .info-columns {
     
 </body>
 </html>
-
-
-
